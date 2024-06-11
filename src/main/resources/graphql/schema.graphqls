@@ -1,0 +1,22 @@
+type Query {
+    getAllCars: [CarList]
+    getCarsByBrand(brand: String!): [CarList]
+}
+
+type CarList {
+	id : String!
+	brand : String!
+	year: Int!
+    name : String!
+    price : Float!
+    kilometersDriven : Int!
+    imageUrl : String!
+    user: User!
+}
+
+type User {
+    id: ID!
+    email: String!
+    firstName: String!
+    lastName: String!
+}
